@@ -3,7 +3,7 @@
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-danger">Удалить</button>
+        <button type="submit" class="btn btn-danger">Купить</button>
     </form>
     <a href="{% url 'main' %}"><i class="bi bi-skip-backward-fill"> На главную</i></a>
 {% endblock %}

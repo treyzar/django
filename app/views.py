@@ -15,7 +15,6 @@ class BookListView(ListView):
     def get_queryset(self):
         query = self.request.GET.get('q')
         if query:
-            # Ищем по названию и автору (регистр не учитывается)
             return Book.objects.filter(
                 Q(title__icontains=query) | Q(author__icontains=query)
             )
