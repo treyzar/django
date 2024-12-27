@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %}
+<ul class="list-group">
+    {% for book in books %}
+    <li class="list-group-item">
+        <a href="#">{{ book.full_name }}</a>
+        <a href="{% url 'update' book.pk %}"><i class="bi bi-pen"></i></a>
+        <a href="{% url 'delete' book.pk %}"><i class="bi bi-trash3" style="color: red;"></i></a>
+    </li>
+    {% endfor %}
+</ul>
+<a class = 'btn btn-success' href="{% url 'create' %}">Добавить</a>
+{% endblock %}
