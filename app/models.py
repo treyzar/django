@@ -80,19 +80,6 @@ class Book(models.Model):
         verbose_name="Price",
         help_text="Enter the price of the book"
     )
-    cover_image = models.ImageField(
-        upload_to='book_covers/',
-        null=True,
-        blank=True,
-        verbose_name="Cover Image",
-        help_text="Upload a cover image for the book"
-    )
-    isbn = models.CharField(
-        max_length=13,
-        unique=True,
-        verbose_name="ISBN",
-        help_text="Enter the ISBN of the book (13 characters)"
-    )
 
 
     def __str__(self):
